@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dogLife/pages/recoverPasswordPage.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -38,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 10,
             ),
             TextFormField(
-              autofocus: true,
+              autofocus: false,
               obscureText: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
@@ -55,7 +56,14 @@ class _LoginPageState extends State<LoginPage> {
               alignment: Alignment.centerRight,
               child: FlatButton(
                   child: Text("Recuperar Senha", textAlign: TextAlign.right),
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => RecoverPasswordPage(),
+                      ),
+                    );
+                  }),
             ),
             SizedBox(
               height: 40,
