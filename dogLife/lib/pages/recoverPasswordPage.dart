@@ -1,3 +1,4 @@
+import 'package:dogLife/components/buttonComponent.dart';
 import 'package:flutter/material.dart';
 
 class RecoverPasswordPage extends StatelessWidget {
@@ -42,52 +43,12 @@ class RecoverPasswordPage extends StatelessWidget {
               height: 10,
             ),
             TextFormField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                labelText: "E-mail",
-                labelStyle: TextStyle(
-                    color: Colors.black38,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400),
-              ),
-              style: TextStyle(fontSize: 18),
+              
             ),
             SizedBox(
               height: 20,
             ),
-            Container(
-              height: 50,
-              alignment: Alignment.centerLeft,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    stops: [
-                      0.3,
-                      1
-                    ],
-                    colors: [
-                      Color(0xFFF58524),
-                      Color(0xFFF92B7F),
-                    ]),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-              child: SizedBox.expand(
-                child: FlatButton(
-                  child: Text(
-                    "Enviar",
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        fontSize: 20),
-                    textAlign: TextAlign.center,
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-            )
+            ButtonComponent("Enviar")
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:dogLife/components/buttonComponent.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatelessWidget {
@@ -95,37 +96,7 @@ class SignupPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Container(
-              height: 50,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                  stops: [0.3, 1],
-                  colors: [
-                    Color(0xFFF58524),
-                    Color(0xFFF92b7F),
-                  ],
-                ),
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                ),
-              ),
-              child: SizedBox.expand(
-                child: FlatButton(
-                  child: Text(
-                    "Cadastrar",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  onPressed: () {},
-                ),
-              ),
-            ),
+            ButtonComponent('Cadastrar'),
             SizedBox(
               height: 10,
             ),
