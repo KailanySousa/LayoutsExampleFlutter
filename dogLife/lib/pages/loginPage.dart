@@ -1,3 +1,4 @@
+import 'package:dogLife/pages/signupPage.dart';
 import 'package:flutter/material.dart';
 import 'package:dogLife/pages/recoverPasswordPage.dart';
 
@@ -55,15 +56,16 @@ class _LoginPageState extends State<LoginPage> {
               height: 40,
               alignment: Alignment.centerRight,
               child: FlatButton(
-                  child: Text("Recuperar Senha", textAlign: TextAlign.right),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => RecoverPasswordPage(),
-                      ),
-                    );
-                  }),
+                child: Text("Recuperar Senha", textAlign: TextAlign.right),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RecoverPasswordPage(),
+                    ),
+                  );
+                },
+              ),
             ),
             SizedBox(
               height: 40,
@@ -153,8 +155,16 @@ class _LoginPageState extends State<LoginPage> {
               height: 40,
               alignment: Alignment.center,
               child: FlatButton(
-                  child: Text("Cadastre-se", textAlign: TextAlign.center),
-                  onPressed: () {}),
+                child: Text("Cadastre-se", textAlign: TextAlign.center),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupPage(),
+                    ),
+                  );
+                },
+              ),
             ),
           ],
         ),
